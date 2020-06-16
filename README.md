@@ -77,4 +77,8 @@ You may be prompted in regards to the removal of main. If so, simply type:
 </code></pre>
 
 ## CONTACT
-If you have any questions about the use of this program, or its generalizable functionality, please contact its developer Camille Phaneuf (cphaneuf@umich.edu).
+If you have any questions about the use of this program, or its generalizable functionality, please contact its developer Camille Phaneuf (cphaneuf@umich.edu). To cite PhaneufJuhaszKruger2019.pdf, please use: 
+
+Juhasz, D., Phaneuf, C.V., & Kruger, D. J. (2019, March). The need for TLC (tender loving cell phone): comparing cell phone attitudes, experiences, and behaviors in undergraduates. Poster, International Convention for Psychological Science, Paris, France. 
+
+The authors (Camille Phaneuf, cphaneuf@umich.edu; Dora Juhasz, djuhasz@umich.edu; Dr. Daniel Kruger, kruger@umich.edu) are happy to discuss this work, and will update this README when a preprint of this project is available.
