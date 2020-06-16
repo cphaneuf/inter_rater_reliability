@@ -15,7 +15,9 @@ Thus far, the CommandLineClassifier has been used for a project titled *The Need
 2. __Survey Data__ 2+ researchers 'code' fill-in-the-blank survey responses 
 3. __Imaging Data__ 2+ researchers quality assess imaging data
 4. __Video Data__ 2+ researchers 'code' behavior/commentary in video recordings
-In all of these cases, it is important for researchers to reach a consensus on their codings, ratings, etc. The CommandLineUtility streamlines this process. 
+
+In all of these cases, it is important for researchers to reach a consensus on their codings, ratings, etc. The CommandLineUtility streamlines this process.
+
 __NOTE:__ Items 3 and 4 require additional development for image or video display, but these changes can be built upon the current framework. While knowledge of C++ is not necessary for using the CommandLineClassifier, it is necessary for adding features.
 
 ## INTRODUCTION
@@ -23,7 +25,9 @@ The CommandLineClassifier program supports:
 1. Reading in a transcribed text file, formatted according to textfile_template.txt
 2. Storing the participant information contained in the text file
 3. Allowing the user to 'tag' or 'code' the contents of the text file, line by line  
+
 __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only the data is presented; participants are completely de-identified from the user's perspective
+
 4. Storing the user's responses, as they relate to the participant information
 5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to datafile_template.csv
 
