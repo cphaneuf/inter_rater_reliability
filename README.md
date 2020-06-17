@@ -52,29 +52,49 @@ __Core Functionality__
 *write_to_file()* is a Save Output Function that iterates through the dictionary of subjects and prints out its contents into data.csv.  
 *main()* declares an instance of completeData, manages the control flow of the program, and prints a concluding message.  
 
-## DEBUGGING
-Built-in debugging tools are included in this program. To start, in main.cpp, uncomment...
-<pre><code>DATA.print();
+## USING THE PROGRAM, STEP 1: Randomize the Text Files
+For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
+1. Navigate to the CommandLineClassifier/Randomize directory.
+2. Compile the program to make an executable, named main.
+<pre><code>$ sudo g++ -std=c++11 -o main main.cpp  
 </code></pre>
-...in main(). This will allow a call to print() in class completeData, which tests the success of:
-1. Storing the participant information contained in the text tile
-2. Storing the user's responses, as they relate to the participant information  
-See the terminal window for the output, which should be compared to the chosen input (.txt) file.
-
-## RUNNING THE PROGRAM
-Compile the program to make an executable, named main.
-<pre><code>$ sudo g++ -o main main.cpp  
-</code></pre>
-Run the newly generated executable.
+3. Run the newly generated executable, responding appropriately to the prompts.
 <pre><code>$ ./main
 </code></pre>
-After the program runs, data.csv will be created. If you would like to run the program again, simply type:
+4. Make a new text file named textM.txt, where M is a number, starting at 1 and increasing by 1 for each new file made.
+5. Concatenate the files, according to the directions shown in the terminal window. Specifically:
+  a. Start the file with: N = number of sessions in this file 
+  b. Copy and paste in the instructed session files, with an enter space between them
+  c. End the file with: EOF
+
+## USING THE PROGRAM, STEP 2: Use the CommandLineClassifier to 'Code' the Randomized Text Files
+Listed here are the instructions for 'coding' the randomized text files using the command line utility. This series of steps should be completed by 2+ researchers (not the project manager from Step 1). 
+1. Move text files to be 'coded' into CommandLineClassifier/CommandLineClassifier.
+2. Compile the program to make an executable, named main.
+<pre><code>$ sudo g++ -o main main.cpp  
+</code></pre>
+3. Run the newly generated executable.
+<pre><code>$ ./main
+</code></pre>
+4. After the program runs, data.csv will be created. If you would like to run the program again, simply type:
 <pre><code>$ rm data.csv
 $ rm main
 </code></pre>
 You may be prompted in regards to the removal of main. If so, simply type:
 <pre><code>$ yes
 </code></pre>
+
+## USING THE PROGRAM, STEP 3: Compare the 'Codings' or 'Ratings' from 2+ Independent Researchers
+FORTHCOMING
+
+## DEBUGGING
+Built-in debugging tools are included in the CommandLineClassifier program. To start, in CommandLineClassifier/CommandLineClassifier/main.cpp, uncomment...
+<pre><code>DATA.print();
+</code></pre>
+...in main(). This will allow a call to print() in class completeData, which tests the success of:
+1. Storing the participant information contained in the text file
+2. Storing the user's responses, as they relate to the participant information  
+See the terminal window for the output, which should be compared to the chosen input (.txt) file.
 
 ## CONTACT
 If you have any questions about the use of this program, or its generalizable functionality, please contact its developer Camille Phaneuf (cphaneuf@umich.edu). To cite PhaneufJuhaszKruger2019.pdf, please use: 
