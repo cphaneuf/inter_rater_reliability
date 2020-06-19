@@ -85,7 +85,25 @@ You may be prompted in regards to the removal of main. If so, simply type:
 </code></pre>
 
 ## USING THE PROGRAM, STEP 3: Compare the 'Codings' or 'Ratings' from 2+ Independent Researchers
-FORTHCOMING
+Once all (2+) researchers have finished using the CommandLineClassifier (i.e. all text files have been independently 'coded'), follow these instructions.
+1. Compile all of researcher 1’s raw data files into a singular file named Coder1Output.csv (see example in CompareRatings directory).
+2. Compile all of researcher 2’s raw data files into a singular file named Coder2Output.csv (see example in CompareRatings directory).
+3. Open Coder1Output.csv and Coder2Output.csv in Microsoft Excel (or equivalent).
+4. Sort Coder1Output.csv and Coder2Output.csv by SubjectID: \
+  a. (In Excel) Data > Sort > A to Z \
+  b. Save files 
+5. Open CompareRatings/CompareRatings.R in RStudio.
+6. Construct the SubjectID list in CompareRatings.R.
+7. Run CompareRatings.R in RStudio; take note of Quality Control console output.
+8. CombinedOutput.csv is produced by CompareRatings.R; to make it more readable (especially if it is a large file), consider these modifications in Excel: \
+  a. Highlight the content of the ‘Master’ columns (Home > Conditional Formatting > Highlight Cells Rules > Equal To… > -2) \
+  b. Highlight the Coder1 output blue; highlight the Coder2 output green
+9. Resolve items in CombinedOutput.csv that are highlighted in red: \
+  a. Have 'coding' researchers meet to come to an agreement on 'coding' designation, or \
+  b. Have project manager make final decision on 'coding' designation
+10. Make the appropriate changes to reflect unanimous, final decisions; save final data file as CombinedOutput_resolved.csv. 
+
+__*CombinedOutput_resolved.csv is the final product of this command line utility and its associated data processing scripts.*__
 
 ## DEBUGGING
 Built-in debugging tools are included in the CommandLineClassifier program. To start, in CommandLineClassifier/CommandLineClassifier/main.cpp, uncomment...
