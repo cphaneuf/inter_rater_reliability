@@ -1,0 +1,21 @@
+VIDEO: MVI_2
+Session: 2
+Type: TEST
+Coder: ResearcherName1 REVIEWED BY ResearcherName2
+QUESTION: 1
+This is the body of the first question that was asked of participants during a focus group style discussion?
+2C: “Something that subject 2C says.”
+2A: “Something that subject 2A says.”
+2F: “Something that subject 2F says.”
+Experimenter: “The body of a prompting or clarifying question?”
+2D: “Something that subject 2D says.”
+QUESTION: 2
+This is the body of the second question that was asked of participants during a focus group style discussion?
+2B: (nods yes)
+QUESTION: 3
+This is the body of the third question that was asked of participants during a focus group style discussion?
+2A: “Something that subject 2A says.”
+QUESTION: 5
+This is the body of the fifth question that was asked of participants during a focus group style discussion?
+2F: (nods yes)
+2D: (shakes head no)

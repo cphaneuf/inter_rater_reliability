@@ -1,0 +1,26 @@
+VIDEO: MVI_1
+Session: 1
+Type: CONTROL
+Coder: ResearcherName1 REVIEWED BY ResearcherName2
+QUESTION: 1
+This is the body of the first question that was asked of participants during a focus group style discussion?
+1C: “Something that subject 1C says.”
+1A: “Something that subject 1A says.”
+1F: “Something that subject 1F says.”
+Experimenter: “The body of a prompting or clarifying question?”
+1D: “Something that subject 1D says.”
+QUESTION: 2
+This is the body of the second question that was asked of participants during a focus group style discussion?
+1B: (shakes head no)
+QUESTION: 3
+This is the body of the third question that was asked of participants during a focus group style discussion?
+1A: “Something that subject 1A says.”
+QUESTION: 4
+This is the body of the fourth question that was asked of participants during a focus group style discussion?
+1E: “Something that subject 1E says.”
+1A: “Something that subject 1A says.”
+1E: “Something that subject 1E says.”
+QUESTION: 5
+This is the body of the fifth question that was asked of participants during a focus group style discussion?
+1F: (nods yes)
+1D: (nods yes)
