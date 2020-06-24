@@ -62,9 +62,9 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 <pre><code>$ ./main
 </code></pre>
 4. Make a new text file named textM.txt, where M is a number, starting at 1 and increasing by 1 for each new file made.
-5. Concatenate the files, according to the directions shown in the terminal window. Specifically:
-  a. Start the file with: N = number of sessions in this file 
-  b. Copy and paste in the instructed session files, with an enter space between them
+5. Concatenate the files, according to the directions shown in the terminal window. Specifically: \
+  a. Start the file with: N = number of sessions in this file \
+  b. Copy and paste in the instructed session files, with an enter space between them \
   c. End the file with: EOF
 
 ## USING THE PROGRAM, STEP 2: Use the CommandLineClassifier to 'Code' the Randomized Text Files
