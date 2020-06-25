@@ -207,46 +207,46 @@ public:
 
     int print_prompt(string sub_number, char question_number) {
         if (question_number == '1') {
-            cout << "Q: " << "When is it not appropriate to use a cell phone? Among certain people? In certain locations? In particular situations?" << endl;
+            cout << "Q: " << "Question 1 body, part A." << endl;
             cout << "A: " << subjects[sub_number].q1 << endl;
             cout << "---" << endl;
-            cout << "Does this answer demonstrate awareness of cell phone etiquette?" << endl;
+            cout << "Question 1 body, part B." << endl;
             cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
             cout << "Please press 'return' or 'enter' after responding." << endl;
         } // if
         
         else if (question_number == '2') {
-            cout << "Q: " << "Do you ever browse through social media sites and have FoMO, which is the Fear of Missing Out? Or wish that you were also doing what they were doing? Or wish that you were invited?" << endl;
+            cout << "Q: " << "Question 2 body, part A." << endl;
             cout << "A: " << subjects[sub_number].q2 << endl;
             cout << "---" << endl;
-            cout << "Does this answer demonstrate FoMO?" << endl;
+            cout << "Question 2 body, part B." << endl;
             cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
             cout << "Please press 'return' or 'enter' after responding." << endl;
         } // else if
         
         else if (question_number == '3') {
-            cout << "Q: " << "Do you ever feel your cell phone vibrating, only to check your notifications and see that there are not any?" << endl;
+            cout << "Q: " << "Question 3 body, part A." << endl;
             cout << "A: " << subjects[sub_number].q3 << endl;
             cout << "---" << endl;
-            cout << "Does this answer demonstrate phantom vibrations?" << endl;
+            cout << "Question 3 body, part B." << endl;
             cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
             cout << "Please press 'return' or 'enter' after responding." << endl;
         } // else if
         
         else if (question_number == '4') {
-            cout << "Q: " << "Did you feel anxious without your cell phone?" << endl;
+            cout << "Q: " << "Question 4 body, part A." << endl;
             cout << "A: " << subjects[sub_number].q4 << endl;
             cout << "---" << endl;
-            cout << "Does this answer demonstrate anxiety from the absence of a cell phone?" << endl;
+            cout << "Question 4 body, part B." << endl;
             cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
             cout << "Please press 'return' or 'enter' after responding." << endl;
         } // else if
         
         else if (question_number == '5') {
-            cout << "Q: " << "Who is addicted to their cell phone?" << endl;
+            cout << "Q: " << "Question 5 body, part A." << endl;
             cout << "A: " << subjects[sub_number].q5 << endl;
             cout << "---" << endl;
-            cout << "Does this answer demonstrate extreme cell phone dependency and/or addiction?" << endl;
+            cout << "Question 5 body, part B." << endl;
             cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
             cout << "Please press 'return' or 'enter' after responding." << endl;
         } // else if
