@@ -96,12 +96,12 @@ Listed here are the instructions for 'coding' the randomized text files using th
 Once all (2+) researchers have finished using the CommandLineClassifier (i.e. all text files have been independently 'coded'), follow these instructions.
 1. Compile all of researcher 1’s raw data files into a singular file named Coder1Output.csv (see example in CompareRatings directory).
 2. Compile all of researcher 2’s raw data files into a singular file named Coder2Output.csv (see example in CompareRatings directory).
-3. Open Coder1Output.csv and Coder2Output.csv in Microsoft Excel (or equivalent).
+3. Open Coder1Output.csv and Coder2Output.csv in Microsoft Excel (or equivalent). If you find yourself viewing 'garbled characters' in Excel, the developer found this article to be helpful: https://support.collaborativedrug.com/hc/en-us/articles/115004625563-CSV-import-in-Excel-with-garbled-characters.
 4. Sort Coder1Output.csv and Coder2Output.csv by SubjectID: \
   a. (In Excel) Data > Sort > A to Z \
   b. Save files 
 5. Open CompareRatings/CompareRatings.R in RStudio.
-6. Construct the SubjectID list in CompareRatings.R.
+6. Update the path to your working directory at 'YOUR PATH HERE' in CompareRatings.R.
 7. Run CompareRatings.R in RStudio; take note of Quality Control console output.
 8. CombinedOutput.csv is produced by CompareRatings.R; to make it more readable (especially if it is a large file), consider these modifications in Excel: \
   a. Highlight the content of the ‘Master’ columns (Home > Conditional Formatting > Highlight Cells Rules > Equal To… > -2) \
