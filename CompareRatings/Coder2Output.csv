@@ -1,0 +1,12 @@
+﻿SubjectID,Q1Response,Q2Response,Q3Response,Q4Response,Q5Response,CoderQ1,CoderQ2,CoderQ3,CoderQ4,CoderQ5
+1A, “Something that subject 1A says.”,, “Something that subject 1A says.”, “Something that subject 1A says.”,,1,-1,1,1,-1
+1B,, (shakes head no),,,,-1,1,-1,-1,-1
+1C, “Something that subject 1C says.”,,,,,1,-1,-1,-1,-1
+1D, “Something that subject 1D says.”,,,, (nods yes),1,-1,-1,-1,1
+1E,,,, “Something that subject 1E says.” “Something that subject 1E says.”,,-1,-1,-1,1,-1
+1F, “Something that subject 1F says.”,,,, (nods yes),1,-1,-1,-1,1
+2A, “Something that subject 2A says.”,, “Something that subject 2A says.”,,,1,-1,1,-1,-1
+2B,, (nods yes),,,,-1,1,-1,-1,-1
+2C, “Something that subject 2C says.”,,,,,1,-1,-1,-1,-1
+2D, “Something that subject 2D says.”,,,, (shakes head no),1,-1,-1,-1,1
+2F, “Something that subject 2F says.”,,,, (nods yes),1,-1,-1,-1,1
