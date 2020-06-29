@@ -31,7 +31,7 @@ __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only
 4. Storing the user's responses, as they relate to the participant information
 5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to datafile_template.csv
 
-## IMPLEMENTATION OVERVIEW
+## COMMANDLINECLASSIFIER IMPLEMENTATION OVERVIEW
 The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as main.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
 
 __Data Structures__  
@@ -66,7 +66,7 @@ Before running this program, be sure to modify the following to match the conten
 * change the templated question bodies in CommandLineClassifier/CommandLineClassifier/main.cpp
 * modify the number of questions, participants, and/or conditions
 
-## USING THE PROGRAM, STEP 1: Randomize the Text Files
+## USING THE PROGRAM, STEP 1: Randomize the Text Files with an Auxiliary Script
 For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
 1. Navigate to the CommandLineClassifier/Randomize directory.
 2. Compile the program to make an executable, named main.
