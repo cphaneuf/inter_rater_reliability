@@ -104,9 +104,9 @@ Once all (2+) researchers have finished using the CommandLineClassifier (i.e. al
 6. Update the path to your working directory at 'YOUR PATH HERE' in CompareRatings.R.
 7. Run CompareRatings.R in RStudio; take note of Quality Control console output.
 8. CombinedOutput.csv is produced by CompareRatings.R; to make it more readable (especially if it is a large file), consider these modifications in Excel: \
-  a. Highlight the content of the ‘Master’ columns (Home > Conditional Formatting > Highlight Cells Rules > Equal To… > -2) \
+  a. Highlight the content of the ‘Master’ columns (Home > Conditional Formatting > Highlight Cells Rules > Equal To… > -2); the default conditional formatting color is red \
   b. Highlight the Coder1 output blue; highlight the Coder2 output green
-9. Resolve items in CombinedOutput.csv that are highlighted in red: \
+9. Resolve items in CombinedOutput.csv that are highlighted in red (indicating inter-rater disagreement): \
   a. Have 'coding' researchers meet to come to an agreement on 'coding' designation, or \
   b. Have project manager make final decision on 'coding' designation
 10. Make the appropriate changes to reflect unanimous, final decisions; save final data file as CombinedOutput_resolved.csv. 
