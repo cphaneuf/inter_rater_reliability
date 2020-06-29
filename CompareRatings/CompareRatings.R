@@ -4,7 +4,7 @@
 library(dplyr)
 
 # Set working directory
-setwd("/Users/camillephaneuf/Desktop/Undergrad Research/KrugerLab/inter_rater_reliability/CompareRatings")
+setwd("YOUR PATH HERE/inter_rater_reliability/CompareRatings")
 
 # Read in data from Coders 1 and 2
 coder1 <- read.csv("Coder1Output.csv")
