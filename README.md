@@ -10,7 +10,7 @@ Psychological data often requires 'coding' by researchers, and it is good practi
 The CommandLineClassifier supports both of these practices through an easy-to-use command line utility.
 
 ## USE CASES
-Thus far, the CommandLineClassifier has been used for a project titled *The Need for TLC: Tender Loving Cellphone*. A recent poster of this work (PhaneufJuhaszKruger2019.pdf) can be found in the root directory of this repository. Here are some other possible use cases for the CommandLineClassifier:
+Thus far, the CommandLineClassifier has been used for a project titled *The Need for TLC: Tender Loving Cellphone*. A recent poster of this work (PhaneufJuhaszKruger2019.pdf) can be found in the root directory of this repository (https://github.com/cphaneuf/inter_rater_reliability/blob/master/PhaneufJuhaszKruger2019.pdf). Here are some other possible use cases for the CommandLineClassifier:
 1. __Observational Data__ 2+ researchers 'code' transcriptions of behavior/commentary in video recordings
 2. __Survey Data__ 2+ researchers 'code' fill-in-the-blank survey responses 
 3. __Imaging Data__ 2+ researchers quality assess imaging data
@@ -50,7 +50,7 @@ __Core Functionality__
 *make_response_list()* is a User Interface Function that compiles a list of all of the participant comments.  
 *print()* (see Debugging, below)  
 *write_to_file()* is a Save Output Function that iterates through the dictionary of subjects and prints out its contents into data.csv.  
-*main()* declares an instance of completeData, manages the control flow of the program, and prints a concluding message.  
+*main()* declares an instance of completeData, manages the control flow of the program, and prints a concluding message.
 
 __Current Implementation__ \
 CommandLineClassifier/CommandLineClassifier/main.cpp supports text files with:
@@ -70,7 +70,7 @@ Before running this program, be sure to modify the following to match the conten
 For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
 1. Navigate to the CommandLineClassifier/Randomize directory.
 2. Compile the program to make an executable, named main.
-<pre><code>$ sudo g++ -std=c++11 -o main main.cpp  
+<pre><code>$ g++ -std=c++11 -o main main.cpp  
 </code></pre>
 3. Run the newly generated executable, responding appropriately to the prompts.
 <pre><code>$ ./main
@@ -85,7 +85,7 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 Listed here are the instructions for 'coding' the randomized text files using the command line utility. This series of steps should be completed by 2+ researchers (not the project manager from Step 1). 
 1. Move text files to be 'coded' into CommandLineClassifier/CommandLineClassifier.
 2. Compile the program to make an executable, named main.
-<pre><code>$ sudo g++ -std=c++11 -o main main.cpp  
+<pre><code>$ g++ -std=c++11 -o main main.cpp  
 </code></pre>
 3. Run the newly generated executable.
 <pre><code>$ ./main
