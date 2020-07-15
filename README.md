@@ -35,8 +35,8 @@ __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only
 The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as main.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
 
 __Data Structures__  
-*subject* struct stores the comments associated with a particular participant AND the user's 'tags' or 'codes' for those comments.  
-*completeData* class contains 3 data members and 9 functions, divided according to the sets below. Control flow between these sets of functions is directed by main().
+*subject* is a struct that stores the comments associated with a particular participant AND the user's 'tags' or 'codes' for those comments.  
+*completeData* is a class that contains 3 data members and 9 functions, divided according to the sets below. Control flow between these sets of functions is directed by main().
 * Functions to Store Responses
 * User Interface Functions
 * Save Output Functions
@@ -85,7 +85,7 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 Listed here are the instructions for 'coding' the randomized text files using the command line utility. This series of steps should be completed by 2+ researchers (not the project manager from Step 1). 
 1. Move text files to be 'coded' into CommandLineClassifier/CommandLineClassifier.
 2. Compile the program to make an executable, named main.
-<pre><code>$ sudo g++ -o main main.cpp  
+<pre><code>$ sudo g++ -std=c++11 -o main main.cpp  
 </code></pre>
 3. Run the newly generated executable.
 <pre><code>$ ./main
@@ -131,8 +131,8 @@ You may be prompted in regards to the removal of main. If so, simply type:
 </code></pre>
 
 ## CONTACT
-If you have any questions about the use of this program, or its generalizable functionality, please contact its developer Camille Phaneuf (cphaneuf@umich.edu). To cite PhaneufJuhaszKruger2019.pdf, please use: 
+If you have any questions about the use of this program, or its generalizable functionality, please contact its developer, Camille Phaneuf (cphaneuf@umich.edu). To cite PhaneufJuhaszKruger2019.pdf, please use: 
 
 Juhasz, D., Phaneuf, C.V., & Kruger, D. J. (2019, March). The need for TLC (tender loving cell phone): comparing cell phone attitudes, experiences, and behaviors in undergraduates. Poster, International Convention for Psychological Science, Paris, France. 
 
-The authors (Camille Phaneuf, cphaneuf@umich.edu; Dora Juhasz, djuhasz@umich.edu; Dr. Daniel Kruger, kruger@umich.edu) are happy to discuss this work, and will update this README when a preprint of this project is available.
+The authors (Camille Phaneuf, Dora Juhasz, & Dr. Daniel Kruger) are happy to discuss this work, and will update this README when a preprint of this project is available.
