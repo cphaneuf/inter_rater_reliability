@@ -55,7 +55,7 @@ public:
             string reprompt = "";
             getline(responses, reprompt);
             return 0;
-        } // if
+        }
         
         string response = "";
         getline(responses, response);
@@ -80,7 +80,7 @@ public:
                 temp.q5 = response;
             }
             subjects[fullID] = temp;
-        } // if
+        }
         // ...but if the subject already exists in the hash table, append
         else {
             if (num_q == 1) {
@@ -98,7 +98,7 @@ public:
             else if (num_q == 5) {
                 subjects[fullID].q5.append(response);
             }
-        } // else
+        }
         
         return 0;
     } // store_responses()
@@ -111,13 +111,13 @@ public:
             char last_char = first[first.length() - 2];
             store_responses(text, last_char, session_number, question_number);
             text >> first;
-        } // while
+        }
         
         return 0;
     } // process_question()
     
     int process_session() {
-        cout << "Please type the name of the file you wish to process, then press 'return' or 'enter' after responding:" << endl;
+        cout << "Please type the name of the file you wish to process, then press 'return' or 'enter' after responding:\n";
         string filename = "";
         cin >> filename;
         
@@ -148,7 +148,7 @@ public:
                 string cond = "";
                 file >> cond;
                 
-                // Store the experimental condition
+                // Store the experimental condition (control, test)
                 if (cond[0] == 'C') {
                     sessions.push_back('C');
                 }
@@ -161,7 +161,7 @@ public:
                 file.ignore();
                 getline(file, cods);
                 
-                // Base decisions off of experimental condition
+                // Base decisions off of experimental condition (if control, else test)
                 if (cond[0] == 'C') {
                     string q = "";
                     file >> q;
@@ -175,8 +175,8 @@ public:
                         getline(file, full_q);
                         // Get subject responses
                         process_question(file, sess_num, q_num);
-                    } // for
-                } // if CONTROL
+                    }
+                }
                 else {
                     string q = "";
                     file >> q;
@@ -190,15 +190,15 @@ public:
                         getline(file, full_q);
                         // Get subject responses
                         process_question(file, sess_num, q_num);
-                    } // for
-                } // else TEST
-            } // for
+                    }
+                }
+            }
             file.close();
-        } // if
+        }
         
         else {
             cout << "ABORT: Unable to open file.";
-        } // else
+        }
         
         return 0;
     } // process_session()
@@ -207,49 +207,49 @@ public:
 
     int print_prompt(string sub_number, char question_number) {
         if (question_number == '1') {
-            cout << "Q: " << "Question 1 body, part A." << endl;
-            cout << "A: " << subjects[sub_number].q1 << endl;
-            cout << "---" << endl;
-            cout << "Question 1 body, part B." << endl;
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
-            cout << "Please press 'return' or 'enter' after responding." << endl;
-        } // if
+            cout << "Q: " << "Question 1 body, part A.\n";
+            cout << "A: " << subjects[sub_number].q1 << "\n";
+            cout << "---\n";
+            cout << "Question 1 body, part B.\n";
+            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+            cout << "Please press 'return' or 'enter' after responding.\n";
+        }
         
         else if (question_number == '2') {
-            cout << "Q: " << "Question 2 body, part A." << endl;
-            cout << "A: " << subjects[sub_number].q2 << endl;
-            cout << "---" << endl;
-            cout << "Question 2 body, part B." << endl;
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
-            cout << "Please press 'return' or 'enter' after responding." << endl;
-        } // else if
+            cout << "Q: " << "Question 2 body, part A.\n";
+            cout << "A: " << subjects[sub_number].q2 << "\n";
+            cout << "---\n";
+            cout << "Question 2 body, part B.\n";
+            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+            cout << "Please press 'return' or 'enter' after responding.\n";
+        }
         
         else if (question_number == '3') {
-            cout << "Q: " << "Question 3 body, part A." << endl;
-            cout << "A: " << subjects[sub_number].q3 << endl;
-            cout << "---" << endl;
-            cout << "Question 3 body, part B." << endl;
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
-            cout << "Please press 'return' or 'enter' after responding." << endl;
-        } // else if
+            cout << "Q: " << "Question 3 body, part A.\n";
+            cout << "A: " << subjects[sub_number].q3 << "\n";
+            cout << "---\n";
+            cout << "Question 3 body, part B.\n";
+            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+            cout << "Please press 'return' or 'enter' after responding.\n";
+        }
         
         else if (question_number == '4') {
-            cout << "Q: " << "Question 4 body, part A." << endl;
-            cout << "A: " << subjects[sub_number].q4 << endl;
-            cout << "---" << endl;
-            cout << "Question 4 body, part B." << endl;
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
-            cout << "Please press 'return' or 'enter' after responding." << endl;
-        } // else if
+            cout << "Q: " << "Question 4 body, part A.\n";
+            cout << "A: " << subjects[sub_number].q4 << "\n";
+            cout << "---\n";
+            cout << "Question 4 body, part B.\n";
+            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+            cout << "Please press 'return' or 'enter' after responding.\n";
+        }
         
         else if (question_number == '5') {
-            cout << "Q: " << "Question 5 body, part A." << endl;
-            cout << "A: " << subjects[sub_number].q5 << endl;
-            cout << "---" << endl;
-            cout << "Question 5 body, part B." << endl;
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)" << endl;
-            cout << "Please press 'return' or 'enter' after responding." << endl;
-        } // else if
+            cout << "Q: " << "Question 5 body, part A.\n";
+            cout << "A: " << subjects[sub_number].q5 << "\n";
+            cout << "---\n";
+            cout << "Question 5 body, part B.\n";
+            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+            cout << "Please press 'return' or 'enter' after responding.\n";
+        }
         
         return 0;
     } // print_prompt()
@@ -267,7 +267,7 @@ public:
             char q_lookup = rand_str[2];
             
             // Use sub_lookup and q_lookup to find the answer and print out the prompt
-            cout << endl << endl;
+            cout << "\n\n";
             print_prompt(sub_lookup, q_lookup);
             
             // Get the user's choice and store their response
@@ -291,7 +291,7 @@ public:
                         subjects[sub_lookup].q5_code = 0;
                     }
                     break;
-                } // if
+                }
                 else if (choice == "1") {
                     if (q_lookup == '1') {
                         subjects[sub_lookup].q1_code = 1;
@@ -309,7 +309,7 @@ public:
                         subjects[sub_lookup].q5_code = 1;
                     }
                     break;
-                } // else if
+                }
                 else if (choice == "2") {
                     if (q_lookup == '1') {
                         subjects[sub_lookup].q1_code = 2;
@@ -327,18 +327,18 @@ public:
                         subjects[sub_lookup].q5_code = 2;
                     }
                     break;
-                } // else if
+                }
                 else {
-                    cout << "************************************************************************************" << endl;
-                    cout << "*** Please choose a valid response (0, 1, or 2). The question is repeated below: ***" << endl;
-                    cout << "************************************************************************************" << endl;
+                    cout << "************************************************************************************\n";
+                    cout << "*** Please choose a valid response (0, 1, or 2). The question is repeated below: ***\n";
+                    cout << "************************************************************************************\n";
                     print_prompt(sub_lookup, q_lookup);
-                } // else
-            } // while
+                }
+            }
 
             // Remove item from list since the response has been coded
             responses.erase(responses.begin() + rand_num);
-        } // for
+        }
         
         return 0;
     } // process_choice()
@@ -346,31 +346,36 @@ public:
     int make_response_list() {
         // Iterate through subjects to generate a list of all responses; for each question a subject answered, add it to the total list of responses
         for (pair<string, subject> sub : subjects) {
-            if (!sub.second.q1.empty()) {
+            // Q1 
+	    if (!sub.second.q1.empty()) {
                 string code = sub.first + "1";
                 responses.push_back(code);
-            } // if Q1
+            }
             
+	    // Q2
             if (!sub.second.q2.empty()) {
                 string code = sub.first + "2";
                 responses.push_back(code);
-            } // if Q2
+            }
             
+	    // Q3
             if (!sub.second.q3.empty()) {
                 string code = sub.first + "3";
                 responses.push_back(code);
-            } // if Q3
+            }
             
+	    // Q4
             if (!sub.second.q4.empty()) {
                 string code = sub.first + "4";
                 responses.push_back(code);
-            } // if Q4
+            }
             
+	    // Q5
             if (!sub.second.q5.empty()) {
                 string code = sub.first + "5";
                 responses.push_back(code);
-            } // if Q5
-        } // for
+            }
+        }
         
         // Once all responses are compiled, randomly select an item from the list and remove it
         process_choice();
@@ -379,7 +384,7 @@ public:
     } // make_response_list()
     
     int print() {
-        cout << "TESTING THE TERMAINAL APPLICATION:" << endl;
+        cout << "TESTING THE TERMAINAL APPLICATION:\n";
         
         // SESSION 1 - responses
         cout << subjects["1A"].q1 << endl;
@@ -530,7 +535,7 @@ public:
             (clean->second.q4).erase(remove(clean->second.q4.begin(), clean->second.q4.end(), ','), clean->second.q4.end());
             (clean->second.q5).erase(remove(clean->second.q5.begin(), clean->second.q5.end(), ','), clean->second.q5.end());
             ++clean;
-        } // while
+        }
         
         // Print contents
         unordered_map<string, subject>::iterator it = subjects.begin();
@@ -547,7 +552,7 @@ public:
                               << it->second.q5_code << ","
                               << "\n";
             ++it;
-        } // while
+        }
         
         data.close();
         return 0;
@@ -570,8 +575,7 @@ int main(int argc, const char * argv[]) {
     DATA.write_to_file();
     
     // Print closing statement
-    cout << endl << endl;
-    cout << "Thank you for using the CommandLineClassifier program. The file data.csv has been generated in your directory." << endl;
+    cout << "\n\nThank you for using the CommandLineClassifier program. The file data.csv has been generated in your directory.\n";
     
     return 0;
 } // main()
