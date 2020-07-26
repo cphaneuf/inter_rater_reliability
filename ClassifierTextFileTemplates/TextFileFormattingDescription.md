@@ -24,10 +24,10 @@ QUESTION: 1
 *	Responses vary by the number of subjects in each session (can have subjects A-F, but can also have any subset of these subjects)
 *	Each _verbal_ response ends in punctuation and is surrounded by “”
 * Each response is transcribed exactly as heard (including  contractions, slang, etc.)
-* Keep in mind, each response will need to be rated by CommandLineClassifier users as one of the following, according to the criteria set forth by the project manager in the question body:
-   -1 = anti/negative
-   0 = neutral 
-   1  =  pro/affirmative
+* Keep in mind, each response will need to be rated by CommandLineClassifier users as one of the following, according to the criteria set forth by the project manager in the question body: <br>
+-1 = anti/negative <br>
+0 = neutral <br>
+1  =  pro/affirmative <br>
 ```
 QUESTION: 1
 This is the body of the first question that was asked of participants during a focus group style discussion?
