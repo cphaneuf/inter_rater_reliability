@@ -29,7 +29,7 @@ The CommandLineClassifier program supports:
 __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only the data is presented; participants are completely de-identified from the user's perspective
 
 4. Storing the user's responses, as they relate to the participant information
-5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to datafile_template.csv
+5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to data_template.csv
 
 ## HOUSEKEEPING
 All files labeled with 'template' are included in this repository as examples of inputs/outputs to the program, with the goal of promoting greater README comprehension.
@@ -94,7 +94,7 @@ Listed here are the instructions for 'coding' the randomized text files using th
 3. Run the newly generated executable.
 <pre><code>$ ./main
 </code></pre>
-4. After the program runs, data.csv will be created. If you would like to run the program again, rename data.csv so that it does not get overwritten by the forthcoming data.csv file.
+4. After the program runs, data_X.csv will be created, where X is the date/time stamp.
 
 ## USING THE PROGRAM, STEP 3: Compare the 'Codings' or 'Ratings' from 2+ Independent Researchers
 Once all (2+) researchers have finished using the CommandLineClassifier (i.e. all text files have been independently 'coded'), follow these instructions.
