@@ -7,7 +7,7 @@ A command line utility (referred to throughout this README as CommandLineClassif
 Psychological data often requires 'coding' by researchers, and it is good practice for:
 1. The data to be 'anonymous' to those coding it, and
 2. The data to be 'reviewed' by > 1 researcher.
-The CommandLineClassifier supports both of these practices through an easy-to-use command line utility.
+The CommandLineClassifier supports both of these practices through an easy-to-use command line utility. The Randomize and CompareRatings directories contain auxiliary scripts that, while optional, further promote these goals.
 
 ## USE CASES
 Thus far, the CommandLineClassifier has been used for a project titled *The Need for TLC: Tender Loving Cellphone*. A recent poster of this work (PhaneufJuhaszKruger2019.pdf) can be found in the root directory of this repository (https://github.com/cphaneuf/inter_rater_reliability/blob/master/PhaneufJuhaszKruger2019.pdf). Here are some other possible use cases for the CommandLineClassifier:
@@ -22,7 +22,7 @@ __NOTE:__ Items 3 and 4 require additional development for image or video displa
 
 ## INTRODUCTION
 The CommandLineClassifier program supports:
-1. Reading in a transcribed text file, formatted according to textfile_template.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription)
+1. Reading in a transcribed text file, formatted according to textfile_template.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription.md)
 2. Storing the participant information contained in the text file
 3. Allowing the user to 'tag' or 'code' the contents of the text file, line by line  
 
@@ -32,7 +32,7 @@ __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only
 5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to datafile_template.csv
 
 ## COMMANDLINECLASSIFIER IMPLEMENTATION OVERVIEW
-The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as main.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
+The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as CLC.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
 
 __Data Structures__  
 *subject* is a struct that stores the comments associated with a particular participant AND the user's 'tags' or 'codes' for those comments.  
@@ -53,7 +53,7 @@ __Core Functionality__
 *main()* declares an instance of completeData, manages the control flow of the program, and prints a concluding message.
 
 __Current Implementation__ \
-CommandLineClassifier/CommandLineClassifier/main.cpp supports text files with:
+CommandLineClassifier/CLC.cpp supports text files with:
 1. 5 question types, with parts A and B for each question
 2. up to 6 participants, each labeled MN (where M is an integer and N is a letter belonging to the set \[A,F])
 3. 2 participant groups ('conditions': CONTROL and TEST), where one group has questions 1, 2, 3, 4, and 5, and the other group answers questions 1, 2, 3, and 5
@@ -63,14 +63,14 @@ Question X body, part A: "When is it not appropriate to use a cell phone? Among 
 Question X body, part B" "Does this answer demonstrate awareness of cell phone etiquette?" 
 
 Before running this program, be sure to modify the following to match the content/structure of your project:
-* change the templated question bodies in CommandLineClassifier/CommandLineClassifier/main.cpp
+* change the templated question bodies in CommandLineClassifier/CLC.cpp
 * modify the number of questions, participants, and/or conditions
 
 ## USING THE PROGRAM, STEP 1: Randomize the Text Files with an Auxiliary Script
 For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
-1. Navigate to the CommandLineClassifier/Randomize directory.
+1. Navigate to the Randomize directory.
 2. Compile the program to make an executable, named main.
-<pre><code>$ g++ -std=c++11 -o main main.cpp  
+<pre><code>$ g++ -std=c++11 -o main Randomize.cpp  
 </code></pre>
 3. Run the newly generated executable, responding appropriately to the prompts.
 <pre><code>$ ./main
@@ -83,9 +83,9 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 
 ## USING THE PROGRAM, STEP 2: Use the CommandLineClassifier to 'Code' the Randomized Text Files
 Listed here are the instructions for 'coding' the randomized text files using the command line utility. This series of steps should be completed by 2+ researchers (not the project manager from Step 1). 
-1. Move text files to be 'coded' into CommandLineClassifier/CommandLineClassifier.
+1. Move text files to be 'coded' into CommandLineClassifier.
 2. Compile the program to make an executable, named main.
-<pre><code>$ g++ -std=c++11 -o main main.cpp  
+<pre><code>$ g++ -std=c++11 -o main CLC.cpp  
 </code></pre>
 3. Run the newly generated executable.
 <pre><code>$ ./main
@@ -114,7 +114,7 @@ Once all (2+) researchers have finished using the CommandLineClassifier (i.e. al
 __*CombinedOutput_resolved.csv is the final product of this command line utility and its associated data processing scripts.*__
 
 ## DEBUGGING
-Built-in debugging tools are included in the CommandLineClassifier program. To start, in CommandLineClassifier/CommandLineClassifier/main.cpp, uncomment...
+Built-in debugging tools are included in the CommandLineClassifier program. To start, in CommandLineClassifier/CLC.cpp, uncomment...
 <pre><code>DATA.print();
 </code></pre>
 ...in main(). This will allow a call to print() in class completeData, which tests the success of:
@@ -123,7 +123,7 @@ Built-in debugging tools are included in the CommandLineClassifier program. To s
 See the terminal window for the output, which should be compared to the chosen input (.txt) file.
 
 ## TECHNICAL, GENERAL
-You must remake the main executable after changes to its corresponding main.cpp are completed and saved. To remove the current executable, type:
+You must remake the main executable after changes to its corresponding .cpp are completed and saved. To remove the current executable, type:
 <pre><code>$ rm main
 </code></pre>
 You may be prompted in regards to the removal of main. If so, simply type:
