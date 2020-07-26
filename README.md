@@ -22,7 +22,7 @@ __NOTE:__ Items 3 and 4 require additional development for image or video displa
 
 ## INTRODUCTION
 The CommandLineClassifier program supports:
-1. Reading in a transcribed text file, formatted according to textfile_template.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription.md)
+1. Reading in a transcribed text file, formatted according to textfile_template_control.txt or textfile_template_test.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription.md)
 2. Storing the participant information contained in the text file
 3. Allowing the user to 'tag' or 'code' the contents of the text file, line by line  
 
@@ -30,6 +30,9 @@ __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only
 
 4. Storing the user's responses, as they relate to the participant information
 5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to datafile_template.csv
+
+## HOUSEKEEPING
+All files labeled with 'template' are included in this repository as examples of inputs/outputs to the program, with the goal of promoting greater README comprehension.
 
 ## COMMANDLINECLASSIFIER IMPLEMENTATION OVERVIEW
 The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as CLC.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
@@ -60,23 +63,24 @@ CommandLineClassifier/CLC.cpp supports text files with:
 
 An example question, asked in PhaneufJuhaszKruger2019.pdf is as follows. \
 Question X body, part A: "When is it not appropriate to use a cell phone? Among certain people? In certain locations? In particular situations?" \
-Question X body, part B" "Does this answer demonstrate awareness of cell phone etiquette?" 
+Question X body, part B: "Does this answer demonstrate awareness of cell phone etiquette?" 
 
 Before running this program, be sure to modify the following to match the content/structure of your project:
 * change the templated question bodies in CommandLineClassifier/CLC.cpp
 * modify the number of questions, participants, and/or conditions
 
-## USING THE PROGRAM, STEP 1: Randomize the Text Files with an Auxiliary Script
+## USING THE PROGRAM, STEP 1: Randomize the Transcribed Data (Text) Files with an Auxiliary Script
 For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
-1. Navigate to the Randomize directory.
-2. Compile the program to make an executable, named main.
+1. Name the transcribed data files text1.txt, text2.txt, text3.txt, ..., textM.txt, where M is the maximum number of transcribed data files.
+2. Navigate to the Randomize directory.
+3. Compile the program to make an executable, named main.
 <pre><code>$ g++ -std=c++11 -o main Randomize.cpp  
 </code></pre>
-3. Run the newly generated executable, responding appropriately to the prompts.
+4. Run the newly generated executable, responding appropriately to the prompts.
 <pre><code>$ ./main
 </code></pre>
-4. Make a new text file named textM.txt, where M is a number, starting at 1 and increasing by 1 for each new file made.
-5. Concatenate the files, according to the directions shown in the terminal window. Specifically: \
+5. Make a new, blank text file named text.txt.
+6. Copy and paste the transcribed data files into text.txt, according to the directions shown in the terminal window. Specifically: \
   a. Start the file with: N = number of sessions in this file \
   b. Copy and paste in the instructed session files, with an enter space between them \
   c. End the file with: EOF
