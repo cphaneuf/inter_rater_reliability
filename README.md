@@ -79,7 +79,7 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 4. Run the newly generated executable, responding appropriately to the prompts.
 <pre><code>$ ./main
 </code></pre>
-5. Make a new, blank text file named text.txt.
+5. Make a new, blank text file named (e.g.) text.txt.
 6. Copy and paste the transcribed data files into text.txt, according to the directions shown in the terminal window. Specifically: \
   a. Start the file with: N = number of sessions in this file \
   b. Copy and paste in the instructed session files, with an enter space between them \
@@ -118,13 +118,12 @@ Once all (2+) researchers have finished using the CommandLineClassifier (i.e. al
 __*CombinedOutput_resolved.csv is the final product of this command line utility and its associated data processing scripts.*__
 
 ## DEBUGGING
-Built-in debugging tools are included in the CommandLineClassifier program. To start, in CommandLineClassifier/CLC.cpp, uncomment...
-<pre><code>DATA.print();
-</code></pre>
-...in main(). This will allow a call to print() in class completeData, which tests the success of:
-1. Storing the participant information contained in the text file
-2. Storing the user's responses, as they relate to the participant information  
-See the terminal window for the output, which should be compared to the chosen input (.txt) file.
+Built-in debugging tools are included in the CommandLineClassifier program. If you activate debugging mode (typing 'y' when prompted), this will allow a call to print() in the completeData class, which tests the success of:
+1. Storing the study participants' verbal and nonverbal responses in the text file read into CLC.cpp (e.g. text.txt)
+2. Storing the CommandLineClassifier user's 'codings' or 'ratings', as they relate to the participants' responses  
+See the terminal window for the output, which should be compared to the:
+1. Chosen input (e.g. text.txt) file
+2. User's independently planned 'codings' or 'ratings'
 
 ## TECHNICAL, GENERAL
 You must remake the main executable after changes to its corresponding .cpp are completed and saved. To remove the current executable, type:
