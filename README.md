@@ -120,7 +120,7 @@ __*CombinedOutput_resolved.csv is the final product of this command line utility
 ## DEBUGGING
 Built-in debugging tools are included in the CommandLineClassifier program. If you activate debugging mode (typing 'y' when prompted), this will allow a call to print() in the completeData class, which tests the success of:
 1. Storing the study participants' verbal and nonverbal responses in the text file read into CLC.cpp (e.g. text.txt)
-2. Storing the CommandLineClassifier user's 'codings' or 'ratings', as they relate to the participants' responses  
+2. Storing the CommandLineClassifier user's 'codings' or 'ratings', as they relate to the participants' responses \
 See the terminal window for the output, which should be compared to the:
 1. Chosen input (e.g. text.txt) file
 2. User's independently planned 'codings' or 'ratings'
