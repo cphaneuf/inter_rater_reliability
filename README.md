@@ -69,7 +69,7 @@ Before running this program, be sure to modify the following to match the conten
 * change the templated question bodies in CommandLineClassifier/CLC.cpp
 * modify the number of questions, participants, and/or conditions
 
-## USING THE PROGRAM, STEP 1: Randomize the Transcribed Data (Text) Files with an Auxiliary Script
+## USING THE PROGRAM, STEP 1: Randomize the Transcribed Data (Text Files) with an Auxiliary Script
 For example, it may be desirable for transcriptions of behavior/commentary in video recordings to be randomized, so behavior/commentary is not 'coded' chronologically. As in the case of PhaneufJuhaszKruger2019.pdf, the authors did not want research assistants to 'code' transcriptions sequentially because 'coding' the current behavior/commentary in question could be biased by the preceeding behavior/commentary; the authors aimed to adopt the most conservative approach possible when processing their observational data. Listed here are the instructions for combining and randomizing standard transcription text files to create a single text file that can be fed into the command line utility. This series of steps should be completed by a project manager (not a researcher that will later be 'coding' the text files). 
 1. Name the transcribed data files text1.txt, text2.txt, text3.txt, ..., textM.txt, where M is the maximum number of transcribed data files.
 2. Navigate to the Randomize directory.
