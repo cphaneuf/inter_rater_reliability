@@ -123,8 +123,8 @@ Built-in debugging tools are included in the CommandLineClassifier program. If y
 2. Storing the CommandLineClassifier user's 'codings' or 'ratings', as they relate to the participants' responses
 
 See the terminal window for the output, which should be compared to the:
-1. Chosen input (e.g. text.txt) file
-2. User's independently planned 'codings' or 'ratings'
+1. Chosen input file (e.g. text.txt) 
+2. User's 'codings' or 'ratings' (north in the terminal window)
 
 ## TECHNICAL, GENERAL
 You must remake the main executable after changes to its corresponding .cpp are completed and saved. To remove the current executable, type:
