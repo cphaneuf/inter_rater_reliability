@@ -378,78 +378,46 @@ public:
     } // make_response_list()
 
     int print() {
-        cout << "TESTING THE COMMANDLINECLASSIFIER:\n";
+        cout << "\nTESTING THE COMMANDLINECLASSIFIER:\n";
 
-        vector<string> subs_sess1{"1A", "1B", "1C", "1D", "1E", "1F"};
-        vector<string> subs_sess2{"2A", "2B", "2C", "2D", "2E", "2F"};
-        int num_subs = 6;
-
-        // SESSION 1 - responses
-        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
-          cout << subjects[subs_sess1[q1_it]].q1 << "\n";
-        }
-        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
-          cout << subjects[subs_sess1[q2_it]].q2 << "\n";
-        }
-        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
-          cout << subjects[subs_sess1[q3_it]].q3 << "\n";
-        }
-        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
-          cout << subjects[subs_sess1[q4_it]].q4 << "\n";
-        }
-        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
-          cout << subjects[subs_sess1[q5_it]].q5 << "\n";
+        cout << "\n(1) Storage of participant responses and user ratings to Question 1:\n";
+        for (pair<string, subject> ind_sub : subjects) {
+          if (!ind_sub.second.q1.empty()) {
+            cout << ind_sub.second.q1 << "\n";
+            cout << "Rating: " << ind_sub.second.q1_code << "\n";
+          }
         }
 
-        // SESSION 1 - coding
-        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
-          cout << subjects[subs_sess1[q1_it]].q1_code << "\n";
-        }
-        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
-          cout << subjects[subs_sess1[q2_it]].q2_code << "\n";
-        }
-        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
-          cout << subjects[subs_sess1[q3_it]].q3_code << "\n";
-        }
-        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
-          cout << subjects[subs_sess1[q4_it]].q4_code << "\n";
-        }
-        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
-          cout << subjects[subs_sess1[q5_it]].q5_code << "\n";
+        cout << "\n(2) Storage of participant responses and user ratings to Question 2:\n";
+        for (pair<string, subject> ind_sub : subjects) {
+          if (!ind_sub.second.q2.empty()) {
+            cout << ind_sub.second.q2 << "\n";
+            cout << "Rating: " << ind_sub.second.q2_code << "\n";
+          }
         }
 
-        // SESSION 2 - responses
-        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
-          cout << subjects[subs_sess2[q1_it]].q1 << "\n";
-        }
-        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
-          cout << subjects[subs_sess2[q2_it]].q2 << "\n";
-        }
-        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
-          cout << subjects[subs_sess2[q3_it]].q3 << "\n";
-        }
-        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
-          cout << subjects[subs_sess2[q4_it]].q4 << "\n";
-        }
-        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
-          cout << subjects[subs_sess2[q5_it]].q5 << "\n";
+        cout << "\n(3) Storage of participant responses and user ratings to Question 3:\n";
+        for (pair<string, subject> ind_sub : subjects) {
+          if (!ind_sub.second.q3.empty()) {
+            cout << ind_sub.second.q3 << "\n";
+            cout << "Rating: " << ind_sub.second.q3_code << "\n";
+          }
         }
 
-        // SESSION 2 - coding
-        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
-          cout << subjects[subs_sess2[q1_it]].q1_code << "\n";
+        cout << "\n(4) Storage of participant responses and user ratings to Question 4:\n";
+        for (pair<string, subject> ind_sub : subjects) {
+          if (!ind_sub.second.q4.empty()) {
+            cout << ind_sub.second.q4 << "\n";
+            cout << "Rating: " << ind_sub.second.q4_code << "\n";
+          }
         }
-        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
-          cout << subjects[subs_sess2[q2_it]].q2_code << "\n";
-        }
-        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
-          cout << subjects[subs_sess2[q3_it]].q3_code << "\n";
-        }
-        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
-          cout << subjects[subs_sess2[q4_it]].q4_code << "\n";
-        }
-        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
-          cout << subjects[subs_sess2[q5_it]].q5_code << "\n";
+
+        cout << "\n(5) Storage of participant responses and user ratings to Question 5:\n";
+        for (pair<string, subject> ind_sub : subjects) {
+          if (!ind_sub.second.q5.empty()) {
+            cout << ind_sub.second.q5 << "\n";
+            cout << "Rating: " << ind_sub.second.q5_code << "\n";
+          }
         }
 
         return 0;
@@ -509,16 +477,16 @@ int main(int argc, const char * argv[]) {
     // Get running mode from user
     bool run_program = true;
     cout << "Do you want to run in debug mode? Type y or n, then press 'return' or 'enter' after responding.\n";
-    char debug_mode = '';
+    char debug_mode = 'i';
     cin >> debug_mode;
     if (debug_mode == 'y') {
-      cout << "Debug mode, activated!\n";
+      cout << "Debug mode, activated!\n\n";
     }
     else if (debug_mode == 'n') {
-      cout << "Proceeding without debugging.\n";
+      cout << "Proceeding without debugging.\n\n";
     }
     else {
-      cout << "ABORT: Unable to detect mode. Try running the CommandLineClassifier again.";
+      cout << "ABORT: Unable to detect mode. Try running the CommandLineClassifier again.\n";
       run_program = false;
     }
 
