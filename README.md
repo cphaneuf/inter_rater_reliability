@@ -22,20 +22,20 @@ __NOTE:__ Items 3 and 4 require additional development for image or video displa
 
 ## INTRODUCTION
 The CommandLineClassifier program supports:
-1. Reading in a transcribed text file, formatted according to textfile_template_control.txt or textfile_template_test.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription.md)
-2. Storing the participant information contained in the text file
+1. Reading in a transcribed text file, with individual testing sessions formatted according to textfile_template_control.txt or textfile_template_test.txt (more information about how the file should be formatted is described in ClassifierTextFileTemplates/TextFileFormattingDescription.md)
+2. Storing the study participants' response(s) contained in the text file
 3. Allowing the user to 'tag' or 'code' the contents of the text file, line by line  
 
 __NOTE:__ When the user is prompted to 'tag' or 'code' at the command line, only the data is presented; participants are completely de-identified from the user's perspective
 
-4. Storing the user's responses, as they relate to the participant information
-5. Outputting a file (data.csv) which contains the participant information matched to the user's responses, formatted according to data_template.csv
+4. Storing the user's 'codings' or 'ratings', as they relate to the participants' response(s)
+5. Outputting a file (data.csv) which contains the participants' response(s) matched to the user's 'codings' or 'ratings', formatted according to data_template.csv
 
 ## HOUSEKEEPING
 All files labeled with 'template' are included in this repository as examples of inputs/outputs to the program, with the goal of promoting greater README comprehension.
 
 ## COMMANDLINECLASSIFIER IMPLEMENTATION OVERVIEW
-The program begins by prompting the user to enter the name of a (.txt) file. This file should be stored in the same directory as CLC.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
+The program begins by prompting the user to: a) set the mode (debugging y/n), and b) enter the name of a (.txt) file. This file should be stored in the same directory as CLC.cpp. Afterward, the user will simply follow along with the prompts as provided on the screen.  
 
 __Data Structures__  
 *subject* is a struct that stores the comments associated with a particular participant AND the user's 'tags' or 'codes' for those comments.  
