@@ -87,7 +87,7 @@ For example, it may be desirable for transcriptions of behavior/commentary in vi
 
 ## USING THE PROGRAM, STEP 2: Use the CommandLineClassifier to 'Code' the Randomized Text Files
 Listed here are the instructions for 'coding' the randomized text files using the command line utility. This series of steps should be completed by 2+ researchers (not the project manager from Step 1). 
-1. Move text files to be 'coded' into CommandLineClassifier.
+1. Move text files to be 'coded' into CommandLineClassifier (e.g. text.txt).
 2. Compile the program to make an executable, named main.
 <pre><code>$ g++ -std=c++11 -o main CLC.cpp  
 </code></pre>
