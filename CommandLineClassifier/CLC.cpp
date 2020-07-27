@@ -212,8 +212,6 @@ public:
             cout << "A: " << subjects[sub_number].q1 << "\n";
             cout << "---\n";
             cout << "Question 1 body, part B.\n";
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
-            cout << "Please press 'return' or 'enter' after responding.\n";
         }
 
         else if (question_number == '2') {
@@ -221,8 +219,6 @@ public:
             cout << "A: " << subjects[sub_number].q2 << "\n";
             cout << "---\n";
             cout << "Question 2 body, part B.\n";
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
-            cout << "Please press 'return' or 'enter' after responding.\n";
         }
 
         else if (question_number == '3') {
@@ -230,8 +226,6 @@ public:
             cout << "A: " << subjects[sub_number].q3 << "\n";
             cout << "---\n";
             cout << "Question 3 body, part B.\n";
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
-            cout << "Please press 'return' or 'enter' after responding.\n";
         }
 
         else if (question_number == '4') {
@@ -239,8 +233,6 @@ public:
             cout << "A: " << subjects[sub_number].q4 << "\n";
             cout << "---\n";
             cout << "Question 4 body, part B.\n";
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
-            cout << "Please press 'return' or 'enter' after responding.\n";
         }
 
         else if (question_number == '5') {
@@ -248,9 +240,10 @@ public:
             cout << "A: " << subjects[sub_number].q5 << "\n";
             cout << "---\n";
             cout << "Question 5 body, part B.\n";
-            cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
-            cout << "Please press 'return' or 'enter' after responding.\n";
         }
+
+        cout << "(0 = NO, 1 = YES, 2 = UNCLEAR)\n";
+        cout << "Please press 'return' or 'enter' after responding.\n";
 
         return 0;
     } // print_prompt()
@@ -348,30 +341,30 @@ public:
         // Iterate through subjects to generate a list of all responses; for each question a subject answered, add it to the total list of responses
         for (pair<string, subject> sub : subjects) {
             // Q1
-	    if (!sub.second.q1.empty()) {
+	          if (!sub.second.q1.empty()) {
                 string code = sub.first + "1";
                 responses.push_back(code);
             }
 
-	    // Q2
+	          // Q2
             if (!sub.second.q2.empty()) {
                 string code = sub.first + "2";
                 responses.push_back(code);
             }
 
-	    // Q3
+	          // Q3
             if (!sub.second.q3.empty()) {
                 string code = sub.first + "3";
                 responses.push_back(code);
             }
 
-	    // Q4
+	          // Q4
             if (!sub.second.q4.empty()) {
                 string code = sub.first + "4";
                 responses.push_back(code);
             }
 
-	    // Q5
+	          // Q5
             if (!sub.second.q5.empty()) {
                 string code = sub.first + "5";
                 responses.push_back(code);
@@ -385,135 +378,79 @@ public:
     } // make_response_list()
 
     int print() {
-        cout << "TESTING THE TERMAINAL APPLICATION:\n";
+        cout << "TESTING THE COMMANDLINECLASSIFIER:\n";
+
+        vector<string> subs_sess1{"1A", "1B", "1C", "1D", "1E", "1F"};
+        vector<string> subs_sess2{"2A", "2B", "2C", "2D", "2E", "2F"};
+        int num_subs = 6;
 
         // SESSION 1 - responses
-        cout << subjects["1A"].q1 << endl;
-        cout << subjects["1B"].q1 << endl;
-        cout << subjects["1C"].q1 << endl;
-        cout << subjects["1D"].q1 << endl;
-        cout << subjects["1E"].q1 << endl;
-        cout << subjects["1F"].q1 << endl;
-        cout << subjects["1A"].q2 << endl;
-        cout << subjects["1B"].q2 << endl;
-        cout << subjects["1C"].q2 << endl;
-        cout << subjects["1D"].q2 << endl;
-        cout << subjects["1E"].q2 << endl;
-        cout << subjects["1F"].q2 << endl;
-        cout << subjects["1A"].q3 << endl;
-        cout << subjects["1B"].q3 << endl;
-        cout << subjects["1C"].q3 << endl;
-        cout << subjects["1D"].q3 << endl;
-        cout << subjects["1E"].q3 << endl;
-        cout << subjects["1F"].q3 << endl;
-        cout << subjects["1A"].q4 << endl;
-        cout << subjects["1B"].q4 << endl;
-        cout << subjects["1C"].q4 << endl;
-        cout << subjects["1D"].q4 << endl;
-        cout << subjects["1E"].q4 << endl;
-        cout << subjects["1F"].q4 << endl;
-        cout << subjects["1A"].q5 << endl;
-        cout << subjects["1B"].q5 << endl;
-        cout << subjects["1C"].q5 << endl;
-        cout << subjects["1D"].q5 << endl;
-        cout << subjects["1E"].q5 << endl;
-        cout << subjects["1F"].q5 << endl;
+        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
+          cout << subjects[subs_sess1[q1_it]].q1 << "\n";
+        }
+        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
+          cout << subjects[subs_sess1[q2_it]].q2 << "\n";
+        }
+        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
+          cout << subjects[subs_sess1[q3_it]].q3 << "\n";
+        }
+        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
+          cout << subjects[subs_sess1[q4_it]].q4 << "\n";
+        }
+        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
+          cout << subjects[subs_sess1[q5_it]].q5 << "\n";
+        }
 
         // SESSION 1 - coding
-        cout << subjects["1A"].q1_code << endl;
-        cout << subjects["1B"].q1_code << endl;
-        cout << subjects["1C"].q1_code << endl;
-        cout << subjects["1D"].q1_code << endl;
-        cout << subjects["1E"].q1_code << endl;
-        cout << subjects["1F"].q1_code << endl;
-        cout << subjects["1A"].q2_code << endl;
-        cout << subjects["1B"].q2_code << endl;
-        cout << subjects["1C"].q2_code << endl;
-        cout << subjects["1D"].q2_code << endl;
-        cout << subjects["1E"].q2_code << endl;
-        cout << subjects["1F"].q2_code << endl;
-        cout << subjects["1A"].q3_code << endl;
-        cout << subjects["1B"].q3_code << endl;
-        cout << subjects["1C"].q3_code << endl;
-        cout << subjects["1D"].q3_code << endl;
-        cout << subjects["1E"].q3_code << endl;
-        cout << subjects["1F"].q3_code << endl;
-        cout << subjects["1A"].q4_code << endl;
-        cout << subjects["1B"].q4_code << endl;
-        cout << subjects["1C"].q4_code << endl;
-        cout << subjects["1D"].q4_code << endl;
-        cout << subjects["1E"].q4_code << endl;
-        cout << subjects["1F"].q4_code << endl;
-        cout << subjects["1A"].q5_code << endl;
-        cout << subjects["1B"].q5_code << endl;
-        cout << subjects["1C"].q5_code << endl;
-        cout << subjects["1D"].q5_code << endl;
-        cout << subjects["1E"].q5_code << endl;
-        cout << subjects["1F"].q5_code << endl;
+        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
+          cout << subjects[subs_sess1[q1_it]].q1_code << "\n";
+        }
+        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
+          cout << subjects[subs_sess1[q2_it]].q2_code << "\n";
+        }
+        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
+          cout << subjects[subs_sess1[q3_it]].q3_code << "\n";
+        }
+        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
+          cout << subjects[subs_sess1[q4_it]].q4_code << "\n";
+        }
+        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
+          cout << subjects[subs_sess1[q5_it]].q5_code << "\n";
+        }
 
         // SESSION 2 - responses
-        cout << subjects["2A"].q1 << endl;
-        cout << subjects["2B"].q1 << endl;
-        cout << subjects["2C"].q1 << endl;
-        cout << subjects["2D"].q1 << endl;
-        cout << subjects["2E"].q1 << endl;
-        cout << subjects["2F"].q1 << endl;
-        cout << subjects["2A"].q2 << endl;
-        cout << subjects["2B"].q2 << endl;
-        cout << subjects["2C"].q2 << endl;
-        cout << subjects["2D"].q2 << endl;
-        cout << subjects["2E"].q2 << endl;
-        cout << subjects["2F"].q2 << endl;
-        cout << subjects["2A"].q3 << endl;
-        cout << subjects["2B"].q3 << endl;
-        cout << subjects["2C"].q3 << endl;
-        cout << subjects["2D"].q3 << endl;
-        cout << subjects["2E"].q3 << endl;
-        cout << subjects["2F"].q3 << endl;
-        cout << subjects["2A"].q4 << endl;
-        cout << subjects["2B"].q4 << endl;
-        cout << subjects["2C"].q4 << endl;
-        cout << subjects["2D"].q4 << endl;
-        cout << subjects["2E"].q4 << endl;
-        cout << subjects["2F"].q4 << endl;
-        cout << subjects["2A"].q5 << endl;
-        cout << subjects["2B"].q5 << endl;
-        cout << subjects["2C"].q5 << endl;
-        cout << subjects["2D"].q5 << endl;
-        cout << subjects["2E"].q5 << endl;
-        cout << subjects["2F"].q5 << endl;
+        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
+          cout << subjects[subs_sess2[q1_it]].q1 << "\n";
+        }
+        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
+          cout << subjects[subs_sess2[q2_it]].q2 << "\n";
+        }
+        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
+          cout << subjects[subs_sess2[q3_it]].q3 << "\n";
+        }
+        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
+          cout << subjects[subs_sess2[q4_it]].q4 << "\n";
+        }
+        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
+          cout << subjects[subs_sess2[q5_it]].q5 << "\n";
+        }
 
         // SESSION 2 - coding
-        cout << subjects["2A"].q1_code << endl;
-        cout << subjects["2B"].q1_code << endl;
-        cout << subjects["2C"].q1_code << endl;
-        cout << subjects["2D"].q1_code << endl;
-        cout << subjects["2E"].q1_code << endl;
-        cout << subjects["2F"].q1_code << endl;
-        cout << subjects["2A"].q2_code << endl;
-        cout << subjects["2B"].q2_code << endl;
-        cout << subjects["2C"].q2_code << endl;
-        cout << subjects["2D"].q2_code << endl;
-        cout << subjects["2E"].q2_code << endl;
-        cout << subjects["2F"].q2_code << endl;
-        cout << subjects["2A"].q3_code << endl;
-        cout << subjects["2B"].q3_code << endl;
-        cout << subjects["2C"].q3_code << endl;
-        cout << subjects["2D"].q3_code << endl;
-        cout << subjects["2E"].q3_code << endl;
-        cout << subjects["2F"].q3_code << endl;
-        cout << subjects["2A"].q4_code << endl;
-        cout << subjects["2B"].q4_code << endl;
-        cout << subjects["2C"].q4_code << endl;
-        cout << subjects["2D"].q4_code << endl;
-        cout << subjects["2E"].q4_code << endl;
-        cout << subjects["2F"].q4_code << endl;
-        cout << subjects["2A"].q5_code << endl;
-        cout << subjects["2B"].q5_code << endl;
-        cout << subjects["2C"].q5_code << endl;
-        cout << subjects["2D"].q5_code << endl;
-        cout << subjects["2E"].q5_code << endl;
-        cout << subjects["2F"].q5_code << endl;
+        for (int q1_it = 0; q1_it < num_subs; ++q1_it) {
+          cout << subjects[subs_sess2[q1_it]].q1_code << "\n";
+        }
+        for (int q2_it = 0; q2_it < num_subs; ++q2_it) {
+          cout << subjects[subs_sess2[q2_it]].q2_code << "\n";
+        }
+        for (int q3_it = 0; q3_it < num_subs; ++q3_it) {
+          cout << subjects[subs_sess2[q3_it]].q3_code << "\n";
+        }
+        for (int q4_it = 0; q4_it < num_subs; ++q4_it) {
+          cout << subjects[subs_sess2[q4_it]].q4_code << "\n";
+        }
+        for (int q5_it = 0; q5_it < num_subs; ++q5_it) {
+          cout << subjects[subs_sess2[q5_it]].q5_code << "\n";
+        }
 
         return 0;
     } // print()
@@ -569,20 +506,40 @@ public:
 int main(int argc, const char * argv[]) {
     completeData DATA;
 
-    // Direct control flow to 'Functions to Store Responses'
-    DATA.process_session();
+    // Get running mode from user
+    bool run_program = true;
+    cout << "Do you want to run in debug mode? Type y or n, then press 'return' or 'enter' after responding.\n";
+    char debug_mode = '';
+    cin >> debug_mode;
+    if (debug_mode == 'y') {
+      cout << "Debug mode, activated!\n";
+    }
+    else if (debug_mode == 'n') {
+      cout << "Proceeding without debugging.\n";
+    }
+    else {
+      cout << "ABORT: Unable to detect mode. Try running the CommandLineClassifier again.";
+      run_program = false;
+    }
 
-    // Direct control flow to 'User Interface Functions'
-    DATA.make_response_list();
+    if (run_program) {
+      // Direct control flow to 'Functions to Store Responses'
+      DATA.process_session();
 
-    // Test storage
-    // DATA.print();
+      // Direct control flow to 'User Interface Functions'
+      DATA.make_response_list();
 
-    // Direct control flow to 'Save Output Functions'
-    DATA.write_to_file();
+      // Test storage
+      if (debug_mode == 'y') {
+        DATA.print();
+      }
 
-    // Print closing statement
-    cout << "\n\nThank you for using the CommandLineClassifier program. The file data.csv has been generated in your directory.\n";
+      // Direct control flow to 'Save Output Functions'
+      DATA.write_to_file();
+
+      // Print closing statement
+      cout << "\n\nThank you for using the CommandLineClassifier program. The file data.csv has been generated in your directory.\n";
+    }
 
     return 0;
 } // main()
